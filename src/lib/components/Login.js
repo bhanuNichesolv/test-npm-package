@@ -5,14 +5,16 @@ import Form from "@rjsf/core";
 import "./login.css";
 import { useState } from "react";
 const Login = (props) => {
-  const { schema, uiSchema } = props;
+  const { schema, uiSchema, handleSumbit } = props;
   const [formData, setFormData] = useState("");
 
   const onChange = (e) => {
     setFormData(e.formData);
   };
 
-  const handleSubmit = (e) => {};
+  const handleSubmit = (e) => {
+    handleSubmit(e.formData);
+  };
   return (
     <div className="">
       <Form
