@@ -16,13 +16,16 @@ function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && 
 const Login = props => {
   const {
     schema,
-    uiSchema
+    uiSchema,
+    handleSumbit
   } = props;
   const [formData, setFormData] = (0, _react.useState)("");
   const onChange = e => {
     setFormData(e.formData);
   };
-  const handleSubmit = e => {};
+  const handleSubmit = e => {
+    handleSubmit(e.formData);
+  };
   return /*#__PURE__*/_react.default.createElement("div", {
     className: ""
   }, /*#__PURE__*/_react.default.createElement(_core.default, {
