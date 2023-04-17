@@ -5,7 +5,7 @@ import Form from "@rjsf/core";
 import "./login.css";
 import { useState } from "react";
 const Login = (props) => {
-  const { schema, uiSchema, handleSumbit } = props;
+  const { schema, uiSchema } = props;
   const [formData, setFormData] = useState("");
 
   const onChange = (e) => {
@@ -13,7 +13,7 @@ const Login = (props) => {
   };
 
   const handleSubmit = (e) => {
-    handleSubmit(e.formData);
+    props.handleSubmit(e);
   };
   return (
     <div className="">
